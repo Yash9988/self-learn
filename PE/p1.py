@@ -21,3 +21,12 @@ print(fib_sum())  # 4613732
 ##
 # https://projecteuler.net/problem=3
 
+num, n = 600851475143, 2
+
+while n ** 2 <= num:
+    if num % n == 0:
+        num //= n
+    else:
+        n += 1
+
+print(num)
