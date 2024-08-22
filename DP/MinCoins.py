@@ -1,37 +1,48 @@
 """
 Given a set of coins = {1, 4, 5} and a target sum, return the minimum #coins that forms the sum
 """
+import timeit
 
 
 # Top-Down Approach
-def change(n):
+def change(n, coins):
     if n == 0:
         return n
 
-    if dp.get(n, -1) == -1:
-        s1 = 1 + change(n - 5) if n - 5 >= 0 else float('inf')  # Reduce by 5
-        s2 = 1 + change(n - 4) if n - 4 >= 0 else float('inf')  # Reduce by 4
-        s3 = 1 + change(n - 1) if n - 1 >= 0 else float('inf')  # Reduce by 1
+    if dp.get(n) is None:
+        ans = float('inf')                          # Set answer to max-value
 
-        dp[n] = min(s1, s2, s3)                                 # Find min
+        for coin in coins:                          # Iterate through all coins available
+            sub = n - coin                          # Obtain new "sub-problem"
+            if sub < 0:                             # Skip if value goes below zero
+                continue
+            ans = min(ans, 1 + change(sub, coins))  # Replace answer with the minimum acquired so far
 
+        dp[n] = ans                                 # Store the final answer in the DP
     return dp[n]
 
 
 # Bottom-up Approach
-def change1(n):
-    dp[0] = 0
+def change1(n, coins):
+    dp[0] = 0                       # Set the base-case value
 
-    for i in range(1, n + 1):
-        s1 = dp[i - 5] if i - 5 >= 0 else float('inf')  # Reduce by 5
-        s2 = dp[i - 4] if i - 5 >= 0 else float('inf')  # Reduce by 4
-        s3 = dp[i - 1] if i - 5 >= 0 else float('inf')  # Reduce by 1
+    for i in range(1, n + 1):       # Iterate till n
+        ans = float('inf')          # Set answer to max-value
 
-        dp[i] = 1 + min(s1, s2, s3)                     # Find min
+        for coin in coins:          # Iterate through all coins available
+            if i - coin < 0:        # Skip if value goes below zero
+                continue
+
+            sub = 1 + dp[i - coin]  # Add a step
+            ans = min(sub, ans)     # Replace with min so far
+
+        dp[i] = ans                 # Store the final answer in DP
 
     return dp[n]
 
 
 dp = {}
-print(change(150))
-print(change1(1500))
+
+# n_steps = 1000
+# print(f"{timeit.timeit('change(30, [1, 4, 5])', number=n_steps, globals=globals()) / n_steps: .2g}s")   # ~2.1e-07 s
+# print(f"{timeit.timeit('change1(30, [1, 4, 5])', number=n_steps, globals=globals()) / n_steps: .2g}s")  # ~1.9e-05 s
