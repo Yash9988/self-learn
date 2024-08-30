@@ -6,9 +6,13 @@ IMPORTANT: The indexing begins with ONE(1) to implement the algorithm seamlessly
 
 
 class Heap:
-    def __init__(self):
-        self.heap = {}      # Initialise heap as a dict
-        self.curr = 1       # curr points to the next available index
+    def __init__(self, arr=None):
+
+        self.heap = {}                      # Initialise heap as a dict
+        self.curr = 1                       # curr points to the next available index
+
+        if arr is not None:                 # Heapify input array
+            [self.push(a) for a in arr]
 
     # Method to swap nodes if child is smaller than parent (bottom to top)
     def swap_up(self, idx):
@@ -46,6 +50,12 @@ class Heap:
             return temp
         else:
             return "The heap is empty"
+
+    def heapify(self, arr):
+        [self.push(a) for a in arr]
+
+    def size(self):
+        return len(self.heap)
 
     def __str__(self):      # TODO: Add proper string representation (using a tree structure, preferably)
         return f"{[self.heap[i] for i in range(1, self.curr)]}"
