@@ -4,7 +4,7 @@ Find the total # unique orientations to arrange tiles on the wall
 """
 
 
-# Top-Down Approach
+# Top-Down Approach (n = #columns in the wall)
 def Tiling(n: int) -> int:
     if n in {1, 2, 3}:                      # If the available #columns are between 1 and 3
         return 1                            # Only one way (vertical) to place the tile
@@ -16,7 +16,7 @@ def Tiling(n: int) -> int:
     return dp[n]                            # Return the result
 
 
-# Bottom-Up Approach
+# Bottom-Up Approach (n = #columns in the wall)
 def Tiling_(n: int) -> int:
     a = [0, 1, 1, 1, 2]                     # Initialise base cases
 
@@ -27,5 +27,5 @@ def Tiling_(n: int) -> int:
 
 
 dp = {}
-print(Tiling(8))
-print(Tiling_(8))
+# print(Tiling(8))
+# print(Tiling_(8))
