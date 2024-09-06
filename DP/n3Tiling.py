@@ -11,12 +11,16 @@ def n3Tiling(m: int, n: int) -> int:
     if m == 1:                                      # For grid shape: 1 x N
         return n % 3 == 0                           # If rows (N) are a multiple of 3, return 1 else 0
 
-    # TODO: Optimise for O(1) Space
     elif m == 2:                                    # For grid shape: 2 x N
-        a = [0, 1, 1]                               # Initialise base-cases
-        for i in range(4, n + 1):
-            a.append(a[-2] + a[-3])                 # Iteratively solve and sum sub-problems
-        return a[n]                                 # Return the result
+        if n < 4:                                   # Check for base-cases
+            return not n == 1
+
+        a, b, c = 0, 1, 1                           # Initialise base-cases
+        i = 3                                       # Initialise iterator
+        while (i := i + 1) <= n:                    # Iterate to N
+            a, b, c = b, c, a + b                   # Update variables
+
+        return b                                    # Return the result
 
     else:
         # BASE-CASES
