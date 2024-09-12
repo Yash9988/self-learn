@@ -30,6 +30,6 @@ def MinWindowSubSeq_(arr: list, window: int) -> int:
 
 
 dp = {}
-x = [3, 2, 1, 1, 2, 3, 1, 3, 2, 1]
-print(MinWindowSubSeq(x, 3))
-print(MinWindowSubSeq_(x, 3))
+# x = [3, 2, 1, 1, 2, 3, 1, 3, 2, 1]
+# print(MinWindowSubSeq(x, 3))
+# print(MinWindowSubSeq_(x, 3))

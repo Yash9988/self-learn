@@ -30,5 +30,5 @@ def CountBinary_(n: int) -> int:
 
 
 dp = {}
-print(CountBinary(4))
-print(CountBinary_(4))
+# print(CountBinary(4))
+# print(CountBinary_(4))
