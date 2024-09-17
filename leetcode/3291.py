@@ -83,3 +83,35 @@ def minValidStrings(words: list[str], target: str) -> int:
             dp[i] = min(dp[i], 1 + dp[j+1])             # Compare and update the DP
 
     return dp[0] if dp[0] < float('inf') else -1        # Return the result
+
+
+# Optimised Solution (Short Runtime)
+def minValidStrings_op(words: list[str], target: str) -> int:
+    dp = [0] * len(target)                              # Initialise the DP
+
+    def search(prefix):                                 # Helper method for searching prefix in words
+        for word in words:                              # Iterate through all words
+            if word.startswith(prefix):                 # Check for prefix in each word
+                return True
+        return False
+
+    l, r = 0, 0                                         # Initialise 2 pointers at the start of the target
+    i = 0                                               # Initialise iterator
+    while i < len(target):                              # Iterate through all characters in target string
+        if l > r:                                       # If pointer 'l' exceeds pointer 'r'
+            return -1                                   # Return -1
+
+        strLen = r - l + 1                              # Calculate string length at current location of pointers
+        if search(target[l:r + 1]):                     # If prefix is present in any of the words
+            if i - strLen >= 0:                         # Update the DP
+                dp[i] = dp[i - strLen] + 1
+            else:
+                dp[i] = 1
+            r += 1                                      # Increment right pointer
+        else:
+            i -= 1                                      # Decrement iterator
+            l += 1                                      # Increment left pointer
+
+        i += 1                                          # Increment iterator
+
+    return dp[-1]                                       # Return the result
