@@ -32,7 +32,7 @@ Constraints:
     -> s consists of English letters, digits, symbols and spaces.
 
 
-Concepts: Double Pointers
+Concepts: Double Pointers, Hashmap
 """
 
 
@@ -54,4 +54,21 @@ def lengthOfLongestSubstring(s: str) -> int:
         else:
             seen.add(c)                         # Add the current character in the set
 
-    return max(res, r - l + 1)                  # Compare and return the maximum result
+    return max(res, r - l + 1)                  # Return the maximum length of the substring
+
+
+# My Alternate Solution
+def lengthOfLongestSubstring_alt(s: str) -> int:
+    if s == "":                                 # Check if the string is empty
+        return 0                                # Return length zero
+
+    seen = {}                                   # Initialise a hashmap to store index of seen characters
+    l = r = res = 0                             # Initialise pointers and counter
+
+    for r, c in enumerate(s):                   # Iterate through all string characters
+        if c in seen:                           # If character present in hashmap
+            res = max(res, r - l)               # Compare and store the maximum length, so far
+            l = max(l, seen[c] + 1)             # Compare and update the pointer to the largest index
+        seen[c] = r                             # Update the index of character in the hashmap
+
+    return max(res, r - l + 1)                  # Return the maximum length of the substring
