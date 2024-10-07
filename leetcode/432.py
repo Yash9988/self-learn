@@ -114,43 +114,42 @@ class AllOne(object):
         self.key_counter = defaultdict(int)                 # Initialise the string-hashmap
         self.node_freq = {0: self.dll.get_sentinel_head()}  # Initialise the frequency-hashmap
 
-# TODO: Understand and comment the remaining logic
     def _rmv_key_pf_node(self, pf, key):
-        node = self.node_freq[pf]
-        node.remove_key(key)
-        if node.is_empty():
-            self.dll.remove(node)
-            self.node_freq.pop(pf)
+        node = self.node_freq[pf]                           # Obtain node for (prev-)freq of key
+        node.remove_key(key)                                # Remove the key from within the hashmap of node
+        if node.is_empty():                                 # Check if the node's hashmap is empty
+            self.dll.remove(node)                           # Remove the node from the DLL
+            self.node_freq.pop(pf)                          # Remove the freq-key from the node hashmap
         return
 
     def inc(self, key):
-        self.key_counter[key] += 1
-        cf = self.key_counter[key]
-        pf = self.key_counter[key] - 1
-        if cf not in self.node_freq:
-            # No need to test if pf = 0 since frequency zero points to sentinel node
-            self.node_freq[cf] = self.dll.insert_after(self.node_freq[pf])
-        self.node_freq[cf].add_key(key)
-        if pf > 0:
-            self._rmv_key_pf_node(pf, key)
+        self.key_counter[key] += 1                          # Increment key count
+        cf = self.key_counter[key]                          # Obtain current key-frequency
+        pf = self.key_counter[key] - 1                      # Obtain previous key-frequency
+        if cf not in self.node_freq:                        # Check if curr-freq not in node-freq hashmap
+            self.node_freq[cf] = (
+                self.dll.insert_after(self.node_freq[pf]))  # Insert new node in DLL for curr-freq
+        self.node_freq[cf].add_key(key)                     # Add the key to the hashset of curr-freq node
+        if pf > 0:                                          # Check if the prev-freq was non-zero
+            self._rmv_key_pf_node(pf, key)                  # Remove the key from hashset of prev-freq hashset
 
     def dec(self, key):
-        if key in self.key_counter:
-            self.key_counter[key] -= 1
-            cf = self.key_counter[key]
-            pf = self.key_counter[key] + 1
-            if self.key_counter[key] == 0:
-                self.key_counter.pop(key)
-            if cf != 0:
-                if cf not in self.node_freq:
-                    self.node_freq[cf] = self.dll.insert_before(self.node_freq[pf])
-                self.node_freq[cf].add_key(key)
-            self._rmv_key_pf_node(pf, key)
+        if key in self.key_counter:                         # Check if key is present in the frequency hashset
+            self.key_counter[key] -= 1                      # Decrement the frequency of key
+            cf = self.key_counter[key]                      # Get the current key-frequency
+            pf = self.key_counter[key] + 1                  # Get the previous key-frequency
+            if self.key_counter[key] == 0:                  # If the curr-freq is zero
+                self.key_counter.pop(key)                   # Remove the key from the frequency hashset
+            if cf != 0:                                     # If the curr-freq is non-zero
+                if cf not in self.node_freq:                # Check if curr-freq key is in node-hashset
+                    self.node_freq[cf] = self.dll.insert_before(self.node_freq[pf])     # Inset new node before
+                self.node_freq[cf].add_key(key)             # Add the key to the corresponding node's hashset
+            self._rmv_key_pf_node(pf, key)                  # Remove the key from the hashset of the prev-node
 
     def getMaxKey(self):
         return self.dll.get_tail().get_any_key() \
-            if self.dll.get_tail().count() > 0 else ""
+            if self.dll.get_tail().count() > 0 else ""      # Return any key from the end node is elements in the node
 
     def getMinKey(self):
         return self.dll.get_head().get_any_key() \
-            if self.dll.get_tail().count() > 0 else ""
+            if self.dll.get_tail().count() > 0 else ""      # Return any key from the start node is elements in the node
