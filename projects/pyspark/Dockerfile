@@ -1,5 +1,5 @@
 # Base Python 3.10 image
-FROM python:3.11
+FROM python:3.10-bullseye
 
 # Expose Port
 EXPOSE 8888 4040
@@ -72,4 +72,4 @@ RUN echo "c.IPKernelApp.capture_fd_output = False" >> "/root/.ipython/profile_de
 CMD ["python3", "-m", "jupyterlab", "--ip", "0.0.0.0", "--allow-root"]
 
 # Run the container with the following command:
-# docker run -d -p 8888:8888 -p 4040:4040 -v .:/home/jupyter/ --name pyspark-jupyter-lab pyspark-jupyter-lab
+# docker run -d -p 8888:8888 -p 4040:4040 -v .:/home/jupyter/ --name pyspark pyspark-jupyter-lab
