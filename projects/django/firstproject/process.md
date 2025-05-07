@@ -7,8 +7,6 @@
 
 Request & Response Objects: Used to manage data between client and server.
 
-
-
 # Log of Steps
 
 
@@ -48,7 +46,7 @@ Request & Response Objects: Used to manage data between client and server.
 8. Next, navigate to the file called `models.py` inside the `firstapp` directory to define database models for your application.
     - Define a new model class called `MenuItem`, which inherits from models.Model, that represents a menu item with fields for name (CharField) and price (IntegerField).
     - Define another model class called `Reservation`, that represents a reservation with fields for firstName, lastName, guestCount, reservationTime, and comments.
-    - Run migrations by running `python manage.py makemigrations firstapp` and `python manage.py migrate`
+    - Run migrations by running `python manage.py makemigrations firstapp` and `python manage.py migrate firstapp`
 
 9. Create a new file called `forms.py` inside the `firstapp` directory to define forms for your application.
     - Define a form class called `ReservationForm`, which inherits from forms.ModelForm, and add a nested `Meta` class that specifies the model and fields to include in the form.
