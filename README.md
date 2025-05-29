@@ -5,7 +5,7 @@ Developer Portfolio
 
 Welcome to my developer portfolio! This repository contains a collection of projects that demonstrate my skills in various programming languages and frameworks.
 
-#  [Projects](./projects/)
+#  [Projects](./projects/README.md)
 
 - [Deepseek-V3](./projects/deepseek-v3/)
 
