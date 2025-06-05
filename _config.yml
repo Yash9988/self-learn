@@ -23,7 +23,7 @@ email: yashsrivastava1998@duck.com
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to my developer portfolio! This repository contains a collection of projects that 
   demonstrate my skills in various programming languages and frameworks.
-baseurl: "" # the subpath of your site, e.g. /blog
+# baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://yash9988.github.io/self-learn" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  Yash9988
