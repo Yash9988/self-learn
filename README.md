@@ -1,33 +1,27 @@
-Developer Portfolio
-===
-
-# Introduction
-
-Welcome to my developer portfolio! This repository contains a collection of projects that demonstrate my skills in various programming languages and frameworks.
+---
+layout: default
+title: Developer Portfolio
+permalink: /
+---
 
 #  [Projects](./projects/README.md)
 
-- [Deepseek-V3](./projects/deepseek-v3/)
+- [Deepseek-V3](https://github.com/Yash9988/self-learn/tree/main/projects/deepseek-v3/transformer.ipynb)
 
-- [Django Web Applications](./projects/django/)
+- [GPT-2](https://github.com/Yash9988/self-learn/tree/main/projects/gpt2/transformer.ipynb)
 
-- [GPT-2](./projects/gpt2/)
+- [SigLIP Vision Transformer](https://github.com/Yash9988/self-learn/tree/main/projects/vision-transformer/transformer.ipynb)
 
-- [Power-BI Dashboards](./projects/power-bi/)
+- [PyTorch](https://github.com/Yash9988/self-learn/tree/main/projects/pytorch-practice/)
 
-- [PySpark](./projects/pyspark/)
+- [Power-BI Dashboards](https://github.com/Yash9988/self-learn/tree/main/projects/power-bi/)
 
-- [PyTorch](./projects/pytorch-practice/)
+- [PySpark](https://github.com/Yash9988/self-learn/tree/main/projects/pyspark/spark-tutorial.ipynb)
 
-- [SigLIP Vision Transformer](./projects/vision-transformer/)
+- [Django Web Applications](https://github.com/Yash9988/self-learn/tree/main/projects/django/)
 
 # [Algorithm Implementation](./algo-imp/README.md)
 
 # [Bit-Manipulation](./BM/README.md)
 
 # [Dynamic Programming](./DP/README.md)
-
-# Contact Information
-
-* Email: yashsrivastava1998@duck.com
-* GitHub: [yash9988](https://github.com/Yash9988/)
