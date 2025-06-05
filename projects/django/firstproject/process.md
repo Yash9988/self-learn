@@ -83,7 +83,7 @@ Request & Response Objects: Used to manage data between client and server.
     - Rename the title tag in the `index.html` file to "Reservations".
     - Add a form element with the method attribute set to "POST" inside the body.
     - Since we are using Django forms, use `{{ form.as_p }}` to render the form fields as paragraphs within the form.
-    - We also need to append a CSRF token to our form for security reasons. Use `{% csrf_token %}` before rendering the form fields.
+    - We also need to append a CSRF token to our form for security reasons. Use {% comment %} `{% csrf_token %}` {% endcomment %} (**using the `comment` tag to suppress jekyll build errors**) before rendering the form fields.
     - Add a submit button with the type attribute set to "submit" and the text "Save".
 
 17. Navigate back to the `views.py` file in the `firstapp` directory, to define the form variable that will be used in our template.
