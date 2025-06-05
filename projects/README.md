@@ -2,7 +2,7 @@
 
 ## [Deepseek-V3](https://github.com/Yash9988/self-learn/tree/main/projects/deepseek-v3/transformer.ipynb)
 
-<center><img src="/assets/images/projects/v3-arch.png" alt="v3-banner" height="250"/></center>
+<center><img src="{{/assets/images/projects/v3-arch.png | relative_url}}" alt="v3-banner" height="250"/></center>
 * Implemented the Deepseek-V3 transformer model architecture from scratch using PyTorch.
 * The model is designed to perform image classification tasks efficiently.
 
