@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash Srivastava - Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Yash Srivastava</h1>
+        <h4>Machine Learning Engineer | Data Scientist</h4>
+        <nav>
+            <a href="#projects">Projects</a>
+            <a href="#timeline">Work Experience & Education</a>
+            <a href="#extra-info">Extra Information</a>
+        </nav>
+    </header>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="filter-buttons">
+            <button data-category="all" class="selected">All</button>
+            <button data-category="machine-learning">Machine Learning Engineer</button>
+            <button data-category="data-scientist">Data Scientist</button>
+            <button data-category="software-developer">Software Developer</button>
+        </div>
+
+        <!-- {% include projects.html %} -->
+        <div class="project-grid">
+            <div class="project-card" data-tags="machine-learning">
+                <img src="../assets/images/projects/v3-arch.png" class="project-image" alt="Deepseek-V3 Banner">
+                <h3>Deepseek-V3</h3>
+                <p>* Implemented the Deepseek-V3 transformer model architecture from scratch using PyTorch.</p>
+                <p>* The model is designed to perform image classification tasks efficiently.</p>
+                <a href="https://github.com/Yash9988/self-learn/tree/main/projects/deepseek-v3/transformer.ipynb"
+                    target="_blank">View on GitHub</a>
+            </div>
+
+            <div class="project-card" data-tags="machine-learning">
+                <img src="../assets/images/projects/gpt2.jpg" class="project-image" alt="GPT-2 Banner">
+                <h3>GPT-2</h3>
+                <p>* Implemented the GPT-2 model architecture for text generation tasks from scratch.</p>
+                <p>* Trained the model on the "tiny-shakespeare" dataset, and then later on huggingface's fineweb-edu
+                    dataset, achieving impressive results.</p>
+                <a href="https://github.com/Yash9988/self-learn/tree/main/projects/gpt2/transformer.ipynb"
+                    target="_blank">View
+                    on GitHub</a>
+            </div>
+
+            <div class="project-card" data-tags="machine-learning">
+                <img src="../assets/images/projects/classifiers.png" class="project-image"
+                    alt="PyTorch Classifiers Banner">
+                <h3>PyTorch</h3>
+                <p>* Implemented and trained various classifiers using PyTorch, from scratch.</p>
+
+                <a href="https://github.com/Yash9988/self-learn/tree/main/projects/pytorch-practice/binary_classifier.ipynb"
+                    target="_blank">Binary Classifier</a>
+                <a href="https://github.com/Yash9988/self-learn/tree/main/projects/pytorch-practice/image_classifier.ipynb"
+                    target="_blank">Image Classifier</a>
+                <a href="https://github.com/Yash9988/self-learn/tree/main/projects/pytorch-practice/text_classifier.ipynb"
+                    target="_blank">Text Classifier</a>
+                <a href="https://github.com/Yash9988/self-learn/tree/main/projects/pytorch-practice/audio_classifier.ipynb"
+                    target="_blank">Audio Classifier</a>
+                <a href="https://github.com/Yash9988/self-learn/tree/main/projects/pytorch-practice/image_classifier_pretrained.ipynb"
+                    target="_blank">Image Classifier with Transfer Learning</a>
+            </div>
+
+            <div class="project-card" data-tags="machine-learning">
+                <img src="../assets/images/projects/siglip.webp" class="project-image"
+                    alt="SigLIP Vision Transformer Banner">
+                <h3>SigLIP Vision Transformer</h3>
+                <p>* Implementation of Vision Transformer for image classification, from scratch.</p>
+                <a href="https://github.com/Yash9988/self-learn/tree/main/projects/vision-transformer/transformer.ipynb"
+                    target="_blank">View on GitHub</a>
+            </div>
+
+            <div class="project-card" data-tags="data-scientist">
+                <img src="../assets/images/projects/power-bi.png" class="project-image" alt="Power BI Dashboard Banner">
+                <h3>Power-BI Dashboards</h3>
+                <p>Power BI dashboards to visualize and analyze data from various sources.</p>
+
+                <a href="https://github.com/Yash9988/self-learn/tree/main/projects/power-bi/power-bi/dummy-analysis/my-dummy-analysis.pbix"
+                    target="_blank">Dummy Dashboard</a>
+                <a href="https://github.com/Yash9988/self-learn/tree/main/projects/power-bi/power-bi/beginner-course/classic_model.pbix"
+                    target="_blank">Beginner Dashboard</a>
+
+            </div>
+
+            <div class="project-card" data-tags="data-scientist">
+                <img src="../assets/images/projects/pyspark.png" class="project-image" alt="PySpark Banner">
+                <h3>PySpark</h3>
+                <p>A beginner-level course on PySpark, covering the basics concepts of data processing and analysis
+                    using Spark.</p>
+                <a href="https://github.com/Yash9988/self-learn/tree/main/projects/pyspark/spark-tutorial.ipynb"
+                    target="_blank">View on Github</a>
+
+            </div>
+
+            <div class="project-card" data-tags="software-developer">
+                <img src="../assets/images/projects/django.jpg" class="project-image"
+                    alt="Django Web Applications Banner">
+                <h3>Django Web Applications</h3>
+                <p>Django Web Applications showcase a collection of web applications built with the Django framework.
+                </p>
+
+                <a href="https://github.com/Yash9988/self-learn/tree/main/projects/django/firstproject/"
+                    target="_blank">First Project</a>
+                <a href="https://github.com/Yash9988/self-learn/tree/main/projects/django/littlelemon/"
+                    target="_blank">Littlelemon Project</a>
+
+            </div>
+
+            <div class="project-card" data-tags="software-developer">
+                <img src="../assets/images/algo.png" class="project-image" style="height: 200px;" alt="">
+                <h3>Algorithm Design</h3>
+                <p> Skilled in Dynamic Programming, Bit Manipulation, and hands-on Algorithm Implementations, leveraging
+                    LeetCode problem-solving to enhance analytical thinking, improve coding efficiency, and develop
+                    optimized solutions for complex challenges in software development.
+                </p>
+
+                <a href="https://github.com/Yash9988/self-learn/tree/main/leetcode/" target="_blank">Leetcode</a>
+                <a href="https://github.com/Yash9988/self-learn/tree/main/BM/" target="_blank">Bit Manipulation</a>
+                <a href="https://github.com/Yash9988/self-learn/tree/main/DP/" target="_blank">Dynamic Programming</a>
+                <a href="https://github.com/Yash9988/self-learn/tree/main/algo-imp/" target="_blank">Algorithm
+                    Implementation</a>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="timeline">
+        <h2>Work Experience & Education</h2>
+
+        <!-- {% include timeline.html %} -->
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="card">
+                    <h3>Teaching Associate</h3>
+                    <i>July 2023 - Now</i>
+                    <p>Developed assessments and study materials for several university courses, and helped improving
+                        student performance.</p>
+                </div>
+                <div class="marker">ANU</div>
+            </div>
+            <div class="timeline-item right">
+                <div class="card">
+                    <h3>Master of Computing</h3>
+                    <i>July 2022 - June 2024</i>
+                    <p>Specialisation in Data Science and Machine Learning</p>
+                </div>
+                <div class="marker">ANU</div>
+            </div>
+            <div class="timeline-item left">
+                <div class="card">
+                    <h3>Computer Vision Engineer</h3>
+                    <i>February 2024 - June 2024</i>
+                    <p>Developed ML models to analyze plant leaves using hyperspectral scanners for recombinant protein
+                        expression.</p>
+                </div>
+                <div class="marker">APPN</div>
+            </div>
+            <div class="timeline-item right">
+                <div class="card">
+                    <h3>Team Lead & Researcher</h3>
+                    <i>July 2023 - November 2023</i>
+                    <p>Developed a PIR sensor system for 3D mapping and movement tracking, enhancing spatial awareness.
+                    </p>
+                </div>
+                <div class="marker">ANU</div>
+            </div>
+            <div class="timeline-item left">
+                <div class="card">
+                    <h3>Data Scientist</h3>
+                    <i>August 2021 - June 2022</i>
+                    <p>Developed automated stock trading algorithms using ensemble machine learning models and Python.
+                    </p>
+                </div>
+                <div class="marker">AlgoT</div>
+            </div>
+            <div class="timeline-item right">
+                <div class="card">
+                    <h3>Bachelor of Technology</h3>
+                    <i>July 2016 - June 2020</i>
+                    <p>Specialisation in Computer Science & Engineering</p>
+                </div>
+                <div class="marker">SRMIST</div>
+            </div>
+            <div class="timeline-item left">
+                <div class="card">
+                    <h3>Computer Vision Engineer</h3>
+                    <i>June 2019 - July 2019</i>
+                    <p>Used computer vision to automate serial code detection on vehicle parts, improving efficiency.
+                    </p>
+                </div>
+                <div class="marker">Alphabt-TVS Motors</div>
+            </div>
+            <div class="timeline-item right">
+                <div class="card">
+                    <h3>Computer Vision Engineer</h3>
+                    <i>June 2018 - July 2018</i>
+                    <p>Developed CNNs for automated defect detection in welded surfaces using Python and Keras.</p>
+                </div>
+                <div class="marker">Lucid Software</div>
+            </div>
+            <div class="timeline-item left">
+                <div class="card">
+                    <h3>Software Developer</h3>
+                    <i>June 2020 - September 2020</i>
+                    <p>Designed monitoring software for a tunnel boring machine, reaching the final round of
+                        competition.</p>
+                </div>
+                <div class="marker">The Boring Competition</div>
+            </div>
+            <div class="timeline-item right">
+                <div class="card">
+                    <h3>AI Researcher</h3>
+                    <i>April 2017 - July 2018</i>
+                    <p>Researched and developed ML models for computer vision and NLP using TensorFlow & Keras.</p>
+                </div>
+                <div class="marker">NextTech Labs</div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="extra-info">
+        <h2>Extra Information</h2>
+        <ul>
+            <li>Certification Name - Issuing Organization</li>
+            <li>Publication Title - Where it was published</li>
+            <!-- Add more certifications/publications as needed -->
+        </ul>
+    </section>
+
+    <footer>
+        <p>Contact: <a href="mailto:yashsrivastava1998@gmail.com">yashsrivastava1998@gmail.com</a></p>
+    </footer>
+
+    <button class="floating-button" onclick="scrollToTop()">Back to Top</button>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
