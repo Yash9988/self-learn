@@ -38,3 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // initial load
     filterProjects('all', document.querySelector('[data-category="all"]'));
 });
+
+function openInNewTab() {
+    window.open("./assets/files/Resume.pdf", "_blank"); // Assuming report.pdf is in the same directory
+}
