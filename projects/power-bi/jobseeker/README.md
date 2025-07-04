@@ -4,6 +4,16 @@ This project involves creating a Power BI dashboard visualizing data from job po
 The data, originally collected since 2022 using a bot and supported by Serpapi, provides insights into job trends, 
 salaries, required skills, and company information.
 
+---
+
+![main-dashboard](assets/main-dashboard.png)
+
+![main-drilldown](assets/main-to-drill.png)
+
+![drilldown](assets/drill-through-dashboard.png)
+
+---
+
 ## Project Scope
 
 The dashboard aims to provide a clear and interactive overview of the data-related job market. Key areas of focus include:
@@ -29,10 +39,3 @@ The completion of this project and dashboard demonstrates proficiency in the fol
 *   **SQL:** Used for querying and manipulating data (depending on how the data was accessed).
 *   **Problem Solving:** Addressing challenges in data integration, visualization, and performance optimization.
 *   **Communication:** Presenting data insights and dashboard functionality effectively.
-
----
-![main-dashboard](assets/main-dashboard.png)
-
-![main-drilldown](assets/main-to-drill.png)
-
-![drilldown](assets/drill-through-dashboard.png)
